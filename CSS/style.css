@@ -1,0 +1,371 @@
+*{
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+:root {
+    --shared-width: 560px;
+    --universal-padding-margin: 420px;
+    --h2-font-size: 25px;
+    --p-font-size: 18px;
+}
+
+body{
+    background-color: white;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin:0px;
+    padding: 0px;
+}
+
+.header-container {
+    background-color: hsl(0, 0%, 100%);
+    height: 70px;
+    border-bottom:1px solid black;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.header-container .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    margin:0px;
+    padding:0px;
+    height: 100%;
+}
+/* web-logo Scaling */
+.nav-bar #web-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color:  #0061ff;
+}
+
+.dropdown-menu {
+    font-size: 15px;
+    position: absolute;
+    row-gap: 19px;
+    overflow-x: auto;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    padding: 15px 15px;
+    border-radius: 12px;
+    display: none;
+    border: 1px solid rgba(0, 0, 0, 0.233);
+}
+
+.nav-items ul:hover .dropdown-menu {
+    display: flex;
+}
+
+
+.dropdown-menu a {
+    color: rgb(39, 35, 35);
+}
+.dropdown-menu a:hover {
+    color: rgb(107, 107, 107);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+ text-decoration: none;
+ color:black;
+}
+
+.nav-items {
+    display: inline-flex;
+    align-items: center;
+    height: 30px;
+    gap:25px;
+}
+
+
+.nav-items > * {
+    margin:0px;
+    padding:0px;
+}
+/* nav-item positioning */
+.nav-items ul > a {
+    font-size: 17px;
+}
+.nav-items ul > a:hover {
+    color:red;
+}
+/* styling sign-in & sing-up btn */
+
+.nav-bar .other-section li {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+}
+.nav-bar .other-section li a {
+    font-weight: bold;
+}
+.nav-bar .other-section li a:nth-child(1) {
+    align-self: center;
+    color: orange;
+}
+.nav-bar .other-section li a:nth-child(2) {
+    padding: 12px 18px;
+    border-radius: 20px;
+    color: white;
+    background-color: #03C775;
+}
+
+/* hightlight nav-item when hovering on its child-element(dropdown) */
+.nav-items ul > a:has(+.dropdown-menu:hover) {
+    color:red;
+}
+
+/* hero-section styling ----------------------------------------------------------*/
+
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
+    height: fit-content;
+    background: url(/IMAGE/CARD/heroSection_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 70px; 
+}
+.hero-section .hero-section-video {
+    position:absolute;
+    display: none;
+}
+.hero-section .column1 {
+    width:60%;
+    padding-left: 150px;
+    padding-top: 80px;
+}
+/* styling column 1 (hero section) element --------------------------- */
+
+.column1 .myH1 {
+    color:white;
+    font-size:50px;
+}
+.column1 .myH1 span {
+    font-style: italic;
+    color:rgb(22, 201, 22);
+    padding: 0px 2px;
+}
+
+/* styling list-box */
+.column1 .list-box {
+    position: relative;
+}
+.column1 .list-box li::before {
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 20px;
+    background-image: url(/IMAGE/ICON/arrow.png);
+    background-size: cover;
+    left:10px;
+}
+.column1 .list-box li {
+    color:white;
+    font-weight: bold;
+    padding-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+/* styling authentication-option */
+.column1 .authentication-option {
+    display: grid;
+    grid-template-columns: repeat(3, 180px);
+    grid-template-areas: "pa pa pa"
+                        "login1 login2 login3";
+    row-gap: 25px;
+    column-gap: 10px;
+}
+.column1 .authentication-option > #main-paragraph {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    grid-area: pa;
+    margin: 0px;
+}
+.column1 .authentication-option > .login-option:nth-child(2) {
+    grid-area: login1;
+} 
+.column1 .authentication-option > .login-option:nth-child(3) {
+    grid-area: login2;
+} 
+.column1 .authentication-option > .login-option:nth-child(4) {
+    grid-area: login3;
+}
+.authentication-option .login-option {
+    background-color: #002E22;
+    border-radius: 15px;
+    border: 1px solid rgba(199, 191, 191, 0.568);
+    cursor: pointer;
+}
+.authentication-option .login-option .check-box {
+    margin:15px 0px 0px 15px;
+}
+.authentication-option .login-option > p {
+    color:white;
+    padding:0px 20px;
+    font-weight: bold;
+    user-select: none;
+}
+.authentication-option .login-option:active {
+    background-color: hsl(164, 83%, 43%);
+}
+
+/* styling redirect-container */
+
+.redirect-container {
+    display: flex;
+    background-color: rgb(233, 226, 226);
+    margin-top: 20px;
+    border-radius: 40px;
+    width: var(--shared-width);
+    height: 55px;
+}
+
+.redirect-container .email-phone-box {
+    flex:1;
+    border:none;
+    outline:none;
+    padding: 15px;
+    font-size: 15px;
+    background:transparent;
+}
+
+.redirect-container .get-started-btn {
+    width:30%;
+    background-color: #03D47C;
+    color: white;
+    border:none;
+    outline:none;
+    padding: 0px 15px;
+    border-radius: 40px;
+    margin: 3px;
+    cursor:pointer;
+}
+
+/* styling get-started container */
+
+.get-started-container {
+    display:flex;
+    flex-direction: row;
+}
+.get-started-container p {
+    color: white;
+    font-weight: 700;
+}
+.get-started-container img {
+    height: 25px;
+    width: auto;
+    margin-left:10px;
+    margin-top: 10px;
+}
+
+/* Sponser Section ------------------------------------------------------------------------------------------------------ */
+.sponser-section {
+    height: 150px;
+    background-color: white;
+    display: flex;
+    /* Firefox Browsers */
+    scrollbar-width: none;
+    overflow-x: auto;
+    user-select: none;
+}
+/* All other Browsers */
+.sponser-section::-webkit-scrollbar-corner {
+    display: none;
+}
+
+.sponser-section .group {
+    width:100%;
+    display: flex;
+    gap: 120px;
+    align-items: center;
+    justify-content:center;
+    padding-left: 60px;
+    animation: slide 20s infinite linear;
+}
+.sponser-section .group img {
+    height: 48px;
+}
+
+@keyframes slide {
+    from{translate:0;}
+    to {translate:-100%;}
+}
+
+/* features section design */
+.features-section .card > img {
+    height: 100px;
+    width: auto;
+}
+
+/* styling column 2 (hero section) element --------------------------- */
+
+.hero-section .column2 {
+    width:50%;
+    padding-top: 150px;
+}
+.column2 .review-section {
+    display: flex;
+    margin-bottom: 70px;
+}
+.column2 .review-section > img {
+    height:40px;
+    width:auto;
+    margin-right: 15px;
+}
+.column2 .review-section p {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    margin: 2px 0px;
+}
+
+/* code given by claude ai */
+
+.column2 .app-ui-overview-container {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Set a fixed height to contain the elements */ /* This crops anything that goes outside */
+}
+
+.column2 .app-ui-overview-container .desktop-screen {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.column2 .app-ui-overview-container .mobile-screen {
+    position: absolute;
+    width: 150px;
+    left: -100px;
+    bottom: -5px; /* Slightly push down for overlap effect */
+ /* Adjust to position where you want it */
+    z-index: 20;
+}
+
+.column2 .app-ui-overview-container .watch-video-btn {
+    padding: 10px 30px;
+    background-color: #358573;
+    position: absolute;
+    top:65%; /* Position from top */
+    left: 30%;
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 40px;
+    cursor: pointer;
+}

@@ -1,0 +1,178 @@
+/* Import fonts or reuse from global if possible, but assuming style.css handles that */
+
+.receipt-hero-section {
+    padding: 120px 20px 60px;
+    /* Account for fixed header */
+    text-align: center;
+    background-color: #f9f9f9;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.scan-container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.upload-area {
+    border: 2px dashed #ddd;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    position: relative;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.upload-area:hover,
+.upload-area.dragover {
+    border-color: #03e481;
+    /* Expensea Green */
+    background-color: #f0fdf7;
+}
+
+.scan-icon {
+    width: 64px;
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+
+.upload-placeholder h3 {
+    margin: 10px 0;
+    color: #444;
+}
+
+.upload-placeholder p {
+    font-size: 0.9rem;
+    color: #999;
+    margin: 0;
+}
+
+.preview-area {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.preview-area img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.scanning-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #03e481;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.scan-btn {
+    background-color: #03e481;
+    color: #003e21;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.scan-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(3, 228, 129, 0.3);
+}
+
+.scan-btn.secondary {
+    background-color: #eee;
+    color: #333;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.scan-result {
+    margin-top: 20px;
+    text-align: left;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.result-box p {
+    margin: 10px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    color: #444;
+}
+
+.result-box strong {
+    color: #222;
+    display: inline-block;
+    width: 100px;
+}

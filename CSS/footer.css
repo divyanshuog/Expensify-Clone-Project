@@ -1,0 +1,87 @@
+/* styling footer section */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-section {
+    padding: 30px 0px;
+    background-color: rgb(58, 163, 105);
+}
+.footer-section .main-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 200px;
+}
+/* styling .main-link-container seperately */
+.main-content-container .main-link-container {
+    text-align: left;
+}
+.main-content-container .main-link-container .link-container {
+    padding-left: 0;
+}
+.main-content-container .main-link-container > h3 {
+    user-select: none;
+    color: rgb(255, 238, 0);
+    font-size: 20px;
+    font-family: montserrat;
+}
+.footer-section li.internal-link {
+    padding-bottom: 15px;
+    padding-left: 0;
+    list-style: none;
+}
+.footer-section a {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+.footer-section a:hover {
+    color:hsl(0, 0%, 80%);
+}
+
+/* styling 3rd column main-link-container */
+.main-content-container .main-link-container-column3 .social-media-container {
+    display: flex;
+    justify-content: space-around;
+}
+.social-media-container .social-link img {
+    height: 20px;
+}
+
+/* styling 4th column main-link-container */
+.main-content-container .main-link-container-column4 .link-container .download-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.main-content-container .main-link-container-column4 .link-container .download-container .download-banner {
+    cursor: pointer;
+    border-radius: 11px;
+    height: 40px;
+    width:60%;
+    object-fit: cover;
+}
+.main-content-container .main-link-container-column4 .link-container .download-container img:hover {
+    opacity: 0.8;
+}
+
+/* giving style to term-policy-license */
+.footer-section > p {
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    font-family: Arial;
+    padding: 0px 200px;
+}
+.footer-section > p:nth-child(2) {
+    margin-bottom: 0;
+}
+.footer-section > p:nth-child(4) {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 50px;
+}

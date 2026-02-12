@@ -1,0 +1,39 @@
+/* Styling call-to-action1 */
+
+.call-to-action-section1, .call-to-action-section2 {
+    margin-bottom: 100px;
+    padding-left: var(--universal-padding-margin);
+}
+.call-to-action-section1 p a {
+    font-weight: bold;
+    padding-left: 8px;
+    color: hsl(240, 74%, 46%);
+    
+}
+.call-to-action-section1 p {
+    font-size: 20px;
+}
+
+/* styling .call-to-action-section2 */
+
+.call-to-action-section2 h2 {
+    font-size: var(--h2-font-size);
+}
+.call-to-action-section2 p {
+    font-size: var(--p-font-size);
+}
+.call-to-action-section2 .get-started-btn {
+    margin-top: 10px;
+    padding: 18px 40px;
+    outline: none;
+    border:1px solid rgb(219, 212, 212);
+    border-radius: 30px;
+    background-color: #03C775;
+    color:white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.call-to-action-section2 .get-started-btn:hover {
+    background-color: hsl(155, 97%, 45%);
+}

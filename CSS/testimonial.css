@@ -1,0 +1,132 @@
+.testimonial-section {
+    display: flex;
+    row-gap: 25px;
+    flex-direction: column;
+    margin: auto;
+    background-image: url(/IMAGE/CARD/testimonialBackground.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    margin: 0px var(--universal-padding-margin) 100px;
+}
+/* designing 3 div inside the .testimonial-section */
+
+/* designing testimonial-row1 --------------------------------------------------------- */
+.testimonial-section .row1 {
+    margin: auto;
+}
+.testimonial-section .row1 .logo-text {
+    font-family: Montserrat;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: yellow;
+    margin-bottom: 0;
+    user-select: none;
+}
+.testimonial-section .row1 h2 {
+    color: white;
+    margin-top: 15px;
+}
+/* designing testimonial-row2 ----------------------------------------------------------------*/
+.testimonial-section .row2 {
+    display: flex;
+    flex-direction: row;
+    column-gap: 25px;
+    justify-content: center;
+}
+.row2 .card-content {
+    position: relative;
+    background: white;
+    width: 350px;
+    padding: 35px;
+    border-radius: 20px;
+}
+.row2 .card-content p {
+    font-size: 17px;
+}
+.row2 .card-content .rating-item {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.row2 .card-content .rating-item span {
+    font-weight: bold;
+    font-size: 40px;
+}
+.row2 .card-content .rating-item img {
+    font-weight: bold;
+    height: 40px;
+    margin-top: 1px;
+}
+
+.row2 .card-content > img {
+    height: 30px;
+    width: 30px;
+}
+.row2 .card-content:nth-child(1) > img {
+    padding-top: 10px;
+}
+.row2 .card-content:nth-child(2) > img {
+    padding-top: 15px;
+}
+
+.row2 .card-content > strong {
+    position: absolute;
+    font-size: 15px;
+    padding-left: 10px;
+}
+.row2 .card-content:nth-child(1) > strong {
+    bottom: 44px;
+}
+.row2 .card-content:nth-child(2) > strong {
+    bottom: 50px;
+}
+
+/* designing testimonial-row3 */
+.testimonial-section .row3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 100px 0px 115px;
+    padding-bottom: 30px;
+}
+
+.testimonial-section .row3 .download-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.testimonial-section .row3 .download-container p {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0;
+    user-select: none;
+}
+.testimonial-section .row3 .download-container .app-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+}
+.testimonial-section .row3 .download-container .app-container img {
+    height: 40px;
+    width: 120px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.testimonial-section .row3 .download-container .app-container img:hover {
+    opacity: 0.7;
+}
+
+.testimonial-section .row3 .badge-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+}
+.testimonial-section .row3 .badge-container img {
+    cursor: pointer;
+    height: 70px;
+}
+.testimonial-section .row3 .badge-container img:hover {
+    opacity: 0.7;
+}
